@@ -1,0 +1,29 @@
+.hero__button {
+  display: inline-block;
+  padding: 10px 32px;
+  @include mainFont(700, 16px, 1.88, 0.06em);
+  color: $primaryWhiteColor;
+  background-color: $accentColor;
+  border-radius: $borderRadiusMain;
+  border: $borderButton;
+  cursor: pointer;
+}
+
+.portfolio-filter__button {
+  display: inline-block;
+  padding: 6px 22px;
+  @include mainFont(500, 16px, 1.63, 0.03em);
+  color: $titleTextColor;
+  background-color: $sectionColor;
+  border: none;
+  border-radius: $borderRadiusMain;
+  cursor: pointer;
+  @include transitions(color, background-color, box-shadow);
+}
+
+.portfolio-filter__button:hover,
+.portfolio-filter__button:focus {
+  color: $primaryWhiteColor;
+  background-color: $accentColor;
+  box-shadow: $boxShadovButton;
+}

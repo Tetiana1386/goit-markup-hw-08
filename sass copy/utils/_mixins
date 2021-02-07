@@ -1,0 +1,33 @@
+@mixin iconHeader($width, $height) {
+  width: $width;
+  height: $height;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+@mixin linkHeader($type, $color) {
+  display: $type;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+@mixin mainFont($weight: 400, $size: 14px, $lh: 1.7, $ls: 0.03em) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lh;
+  letter-spacing: $ls;
+  font-family: $mainFontFamily;
+  color: $primaryTextColor;
+}
+
+@mixin transitions($property...) {
+  transition-property: $property;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

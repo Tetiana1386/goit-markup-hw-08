@@ -1,0 +1,36 @@
+.page-footer__network {
+  display: flex;
+}
+
+.page-footer__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50% 50%;
+  background-color: $footerBcgNetwork;
+
+  @include transitions(background-color);
+}
+
+.page-footer__link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.page-footer__link:hover,
+.page-footer__link:focus {
+  background-color: $accentColor;
+}
+
+.page-footer__icon {
+  width: 20px;
+  height: 20px;
+  fill: $primaryWhiteColor;
+  @include transitions(fill);
+
+  &:hover,
+  &:focus {
+    fill: $primaryWhiteColor;
+  }
+}

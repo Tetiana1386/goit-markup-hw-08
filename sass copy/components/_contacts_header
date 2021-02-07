@@ -1,0 +1,16 @@
+.page-header__contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.page-header__link--contact {
+  display: flex;
+  align-items: center;
+
+  color: $primaryTextColor;
+}
+
+.page-header__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}

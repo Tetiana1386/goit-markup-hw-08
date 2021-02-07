@@ -1,0 +1,45 @@
+.page-header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__nav--main {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__menu {
+  display: flex;
+  margin-left: 93px;
+}
+
+.page-header__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.page-header__link {
+  @extend %header-link;
+  color: $titleTextColor;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+.page-header__link.current {
+  position: relative;
+  color: $accentColor;
+}
+
+.page-header__link.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+
+  background-color: $accentColor;
+  border-radius: 2px;
+}

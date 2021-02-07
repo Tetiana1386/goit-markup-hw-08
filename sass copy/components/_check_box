@@ -1,0 +1,52 @@
+.check {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 12px;
+  margin-bottom: 30px;
+}
+
+.check__inbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.check__box {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  padding-left: 12px;
+  margin-right: 8.38px;
+  border: 1px solid $titleTextColor;
+  box-shadow: 0px 4px 4px 0px $boxShadovColorChek;
+  @include transitions(background-color, border-color);
+}
+
+.check__box,
+.check__text:hover {
+  cursor: pointer;
+}
+
+.check__text {
+  color: $primaryTextColor;
+}
+.modal-form__link {
+  color: $accentColor;
+}
+
+.check__inbox:focus + .check__box {
+  border: 2px solid $titleTextColor;
+}
+
+.check__inbox:checked + .check__box {
+  border-color: $accentColor;
+  background-color: $accentColor;
+  background-image: url('../images/icon\ check.svg');
+  background-size: contain;
+  background-origin: border-box;
+}

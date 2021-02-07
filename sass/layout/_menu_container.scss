@@ -1,0 +1,172 @@
+.menu__container {
+  display: none;
+  padding: 48px 40px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: $primaryWhiteColor;
+
+  &.is-open {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu__container {
+    display: flex;
+    padding: 0;
+    position: static;
+  }
+}
+
+.menu__list {
+  margin-bottom: 270px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.menu__contacts {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 64px;
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+
+    margin-bottom: 0;
+    margin-left: 84px;
+  }
+}
+
+.menu__link {
+  @include mainFont(500, 40px, 1.17, 0.02em);
+  color: $titleTextColor;
+  text-decoration: none;
+  @include transitions(color);
+
+  @media screen and(min-width: 768px) {
+    display: block;
+    &:hover,
+    &:focus {
+      color: $accentColor;
+      outline: transparent;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu__link--nav {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include mainFont(500, $lh: 1.17, $ls: 0.02em);
+    color: $titleTextColor;
+    @include transitions(color);
+  }
+}
+.menu__link--nav.current {
+  color: $accentColor;
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 4px;
+
+      background-color: $accentColor;
+      border-radius: 2px;
+    }
+  }
+}
+
+.menu__item,
+.menu__item--contacts {
+  margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.menu__link--tel {
+  @include mainFont(500, 34px, 1.17, 0.02em);
+  color: $accentColor;
+  margin-bottom: 0;
+}
+
+.menu__link--email {
+  @include mainFont(500, 24px, 1.17, 0.02em);
+  color: $primaryTextColor;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__link--email,
+  .menu__link--tel {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include mainFont(500, 12px, 1.17, 0.02em);
+    color: $primaryTextColor;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .page-header__icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-header__icon {
+    display: block;
+    margin-right: 8px;
+    fill: currentColor;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-header__icon--tel {
+    width: 10px;
+    height: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-header__icon--email {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+.menu__network {
+  display: inline-flex;
+}
+
+.menu__item--network:not(:last-child) {
+  border-right: 1px solid $modalInputBorder;
+  padding-right: 10px;
+}
+
+.menu__item--network:not(:first-child) {
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__item--network {
+    display: none;
+  }
+}
+
+.menu__link--network {
+  @include mainFont(500, 18px, 1.2, 0.02em);
+  color: $accentColor;
+  text-decoration: none;
+}

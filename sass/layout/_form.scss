@@ -1,0 +1,99 @@
+/* Footer-form */
+
+.page-footer__label input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px 16px;
+  border-radius: $borderRadiusMain;
+  border: 1px solid $footerInputBorderColor;
+  color: $primaryTextColor;
+  background-color: $footerBcgColor;
+}
+
+/* Modal_form */
+
+.modal-form {
+  padding: 40px;
+}
+
+.modal-form__title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  @include mainFont(700, 20px, 1.17);
+  color: $titleTextColor;
+  text-align: center;
+}
+
+.modal-form__label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.modal-form__label .form-comment {
+  margin-bottom: 20px;
+}
+
+.modal-form__mark {
+  margin-bottom: 4px;
+  @include mainFont($size: 12px, $lh: 1.2, $ls: 0.01em);
+  color: $primaryTextColor;
+}
+
+.modal-form__input {
+  width: 100%;
+  padding: 11px 12px 11px 42px;
+  border: 1px solid $modalInputBorder;
+  border-radius: $borderRadiusMain;
+  @include transitions(border-color);
+}
+
+.modal-form__input:hover {
+  cursor: pointer;
+}
+
+.modal-form__input:focus {
+  border-color: $accentColor;
+  outline: transparent;
+  cursor: pointer;
+}
+
+.modal-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  @include transitions(fill);
+}
+
+.modal-form__input:focus + .modal-form__icon {
+  fill: $accentColor;
+}
+
+.modal-form__comment textarea::placeholder {
+  @include mainFont($lh: 1.14, $ls: 0.01em);
+  color: $modalPlaceholderColor;
+}
+
+.modal-form__textarea {
+  border: 1px solid $modalInputBorder;
+  border-radius: 4px;
+  padding: 12px 16px;
+  @include transitions(border-color);
+}
+
+.modal-form__textarea:hover {
+  cursor: pointer;
+}
+
+.modal-form__textarea:focus {
+  border-color: $accentColor;
+  outline: transparent;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}

@@ -1,0 +1,87 @@
+.section-team {
+  background-color: $sectionColor;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section-team__list {
+  display: flex;
+}
+
+.section-team__item {
+  width: calc((100%-90px) / 4);
+  margin-right: 30px;
+
+  background: $primaryWhiteColor;
+  box-shadow: $boxShadovCard;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.section-team__item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.section-team__subtitle {
+  margin-top: 0;
+  margin-bottom: 10px;
+  @include mainFont(500, $size: 16px, $lh: 1.17);
+  color: $titleTextColor;
+}
+
+.section-team__profession {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.section-team__profession {
+  @include mainFont($size: 16px, $lh: 1.17);
+}
+
+.section-team__foto {
+  margin-bottom: 30px;
+}
+
+.section-team__content {
+  text-align: center;
+}
+
+.section-team__networks {
+  display: flex;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 30px;
+}
+
+.section-team__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50% 50%;
+  @include transitions(background-color);
+}
+
+.section-team__link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.section-team__link:hover,
+.section-team__link:focus {
+  background-color: $accentColor;
+}
+
+.section-team__link .section-team__icon {
+  @include transitions(fill);
+}
+
+.section-team__link:hover .section-team__icon,
+.section-team__link:focus .section-team__icon {
+  fill: $primaryWhiteColor;
+}
+
+.section-team__icon {
+  fill: $iconColor;
+  width: 20px;
+  height: 20px;
+}

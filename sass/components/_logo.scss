@@ -1,0 +1,26 @@
+.page-header__logo {
+  padding: 16px 0;
+  @include mainFont(700, 24px, $lh: 1.17);
+  font-family: $logoFontFamily;
+  color: $logoHederColor;
+  @include transitions(color);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+span {
+  color: $accentColor;
+}
+
+.page-footer__logo {
+  margin-bottom: 20px;
+  @include mainFont(700, 26px, 1.17);
+  font-family: $logoFontFamily;
+  color: $primaryWhiteColor;
+
+  text-decoration: none;
+}

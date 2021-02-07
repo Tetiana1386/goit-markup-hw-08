@@ -1,0 +1,19 @@
+.section-portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.portfolio-filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.portfolio-filter__element {
+  margin-bottom: 15px;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}

@@ -1,0 +1,36 @@
+.hero {
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 118px;
+  background-image: linear-gradient(to right, $gradient, $gradient),
+    url('../images/Header img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $heroBcgColor;
+  text-align: center;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, $gradient, $gradient),
+      url('../images/Header img@2x.jpg');
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, $gradient, $gradient),
+      url('../images/Header768 img.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(to right, $gradient, $gradient),
+        url('../images/Header768 img@2x.jpg');
+    }
+  }
+}

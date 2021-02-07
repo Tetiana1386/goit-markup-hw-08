@@ -1,0 +1,16 @@
+.page-header__logo {
+  @include mainFont(700, 26px);
+  font-family: $logoFontFamily;
+  color: $logoHederColor;
+  @include transitions(color);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+span {
+  color: $accentColor;
+}
