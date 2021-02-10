@@ -32,39 +32,11 @@ body {
   }
 }
 
-/*width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;*/
-
-/*@media screen and (min-width: 480px) {
-  img {
-    width: 450px;
-  }
-
-  @media screen and (min-width: 768px) {
-    img {
-      width: 354px;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    img {
-      width: 370px;
-    }
-  }
-}*/
-
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-
-/*@media screen and (min-width: 768px) {
-  .image {
-    width: 354px;
-  }
-}*/
 
 .visually-hidden {
   position: absolute;

@@ -9,6 +9,14 @@
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    width: 696px;
+    @include mainFont(900, 44px, 1.3, 0.06em);
+    color: $primaryWhiteColor;
+  }
+}
+
 /* Section-subtitle */
 
 .section-advantage__subtitle {

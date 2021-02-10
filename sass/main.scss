@@ -1,43 +1,21 @@
 @import './base/normalize';
-
 @import './base/fonts';
-
-@import './utils/variables', './utils/mixins', './utils/plaseholders';
-
+@import './utils/variables', './utils/mixins';
 @import './base/defoult';
-
-@import './layout/heder';
-
-@import './components/logo';
-
-@import './components/navigation';
-
-@import './components/buttons';
-
-@import './layout/menu_container';
-
-@import './components/titles';
-
-@import './layout/hero';
-
-@import './layout/section_working';
-
-@import './layout/section_advantage';
-
-@import './layout/section_team';
-
-@import './layout/section_clients';
-
-@import './layout/footer';
-
-@import './components/networks_link';
-
 @import './layout/modal_backdrop';
-
 @import './components/check_box';
-
 @import './layout/form';
-
+@import './layout/heder';
+@import './components/logo';
+@import './layout/navigation';
+@import './components/buttons';
+@import './components/titles';
+@import './layout/hero';
+@import './layout/section_advantage';
+@import './layout/section_working';
+@import './layout/section_team';
+@import './layout/section_clients';
+@import './components/networks_link';
+@import './layout/footer';
 @import './layout/section_portfolio';
-
 @import './layout/portfolio_grid';

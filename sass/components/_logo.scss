@@ -12,15 +12,21 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .page-header__logo {
+    margin-right: 93px;
+  }
+}
+
 span {
   color: $accentColor;
 }
 
 .page-footer__logo {
+  display: block;
   margin-bottom: 20px;
-  @include mainFont(700, 26px, 1.17);
+  @include mainFont(700, 24px, 1.17);
   font-family: $logoFontFamily;
   color: $primaryWhiteColor;
-
   text-decoration: none;
 }

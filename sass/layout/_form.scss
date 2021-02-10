@@ -1,6 +1,6 @@
 /* Footer-form */
 
-.page-footer__label input {
+.page-footer__form .page-footer__label input {
   width: 100%;
   margin-bottom: 20px;
   padding: 15px 16px;
@@ -8,6 +8,45 @@
   border: 1px solid $footerInputBorderColor;
   color: $primaryTextColor;
   background-color: $footerBcgColor;
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer__form .page-footer__label input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__form .page-footer__label input {
+    margin-bottom: 0;
+    margin-right: 12px;
+    width: 358px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer__label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__label {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__form {
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-footer p {
+    padding-top: 12px;
+  }
 }
 
 /* Modal_form */

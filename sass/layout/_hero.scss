@@ -11,6 +11,13 @@
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
+    padding-top: 200px;
+  }
+}
+
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
@@ -31,6 +38,21 @@
     .hero {
       background-image: linear-gradient(to right, $gradient, $gradient),
         url('../images/Header768 img@2x.jpg');
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .hero {
+      background-image: linear-gradient(to right, $gradient, $gradient),
+        url('../images/Header1200 img.jpg');
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      .hero {
+        background-image: linear-gradient(to right, $gradient, $gradient),
+          url('../images/Header1200 img@2x.jpg');
+      }
     }
   }
 }

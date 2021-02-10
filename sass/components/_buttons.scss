@@ -1,5 +1,4 @@
 /* Button-menu-mobil*/
-
 .button__menu {
   display: inline-flex;
   margin: 0;
@@ -14,6 +13,7 @@
     outline: transparent;
   }
 }
+
 @media screen and (min-width: 768px) {
   .button__menu {
     display: none;
@@ -49,6 +49,7 @@
 
 .page-footer__button {
   display: inline-flex;
+  width: 200px;
   padding: 10px 28px 10px 29px;
   @include mainFont(700, 16px, 1.88, 0.06em);
   color: $primaryWhiteColor;
@@ -120,11 +121,12 @@
   border-radius: $borderRadiusMain;
   cursor: pointer;
   @include transitions(color, background-color, box-shadow);
-}
 
-.portfolio-filter__button:hover,
-.portfolio-filter__button:focus {
-  color: $primaryWhiteColor;
-  background-color: $accentColor;
-  box-shadow: $boxShadovButton;
+  &:hover,
+  &:focus {
+    color: $primaryWhiteColor;
+    background-color: $accentColor;
+    box-shadow: $boxShadovButton;
+    outline: transparent;
+  }
 }
