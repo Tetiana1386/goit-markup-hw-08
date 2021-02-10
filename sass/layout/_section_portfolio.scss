@@ -3,6 +3,13 @@
   padding-bottom: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .section-portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .portfolio-filter__list {
   display: flex;
   flex-wrap: wrap;

@@ -1307,10 +1307,8 @@ span {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .section-working {
-    display: none;
-  }
+.section-working {
+  display: none;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1822,6 +1820,13 @@ span {
   padding-bottom: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .section-portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .portfolio-filter__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1887,7 +1892,7 @@ span {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .portfolio-card__element:not(:last-child) {
     margin-bottom: 30px;
   }
