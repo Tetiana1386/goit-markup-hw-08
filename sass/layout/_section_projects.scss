@@ -1,0 +1,59 @@
+.section-projects {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.project-filter__list {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    margin-bottom: -15px + 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .project-filter__element {
+    margin-bottom: 15px;
+  }
+}
+
+.project-filter__element:not(:last-child) {
+  margin-right: 8px;
+}
+
+.project-filter__button {
+  @extend %button;
+  padding: 6px 22px;
+  min-width: 73px;
+  min-height: 38px;
+  color: $titleTextColor;
+  background-color: $sectionColor;
+  font-weight: $secondaryFontWeight;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+
+  @include transitions(color, background-color, box-shadow);
+
+  &:hover,
+  &:focus {
+    color: $primaryWhiteColor;
+    background-color: $accentColor;
+    box-shadow: $boxShadovButton;
+    outline: transparent;
+  }
+}

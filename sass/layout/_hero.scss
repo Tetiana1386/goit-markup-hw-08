@@ -3,11 +3,13 @@
   margin-right: auto;
   margin-left: auto;
   padding-top: 118px;
+
   background-image: linear-gradient(to right, $gradient, $gradient),
     url('../images/Header img.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $heroBcgColor;
+
   text-align: center;
 }
 
@@ -55,4 +57,30 @@
       }
     }
   }
+}
+
+/* Main-Title*/
+.hero__title {
+  width: 360px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+
+  color: $primaryWhiteColor;
+  font-weight: $heroTitleFontWeight;
+  font-size: $logoFontSize;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    font-size: $heroFontSize;
+    line-height: 1.36;
+    width: 696px;
+  }
+}
+
+.hero__button {
+  @extend %button;
 }

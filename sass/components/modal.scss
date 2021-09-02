@@ -1,54 +1,31 @@
-/* Footer-form */
-
-.page-footer__form .page-footer__label input {
+.backdrop {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 15px 16px;
-  border-radius: $borderRadiusMain;
-  border: 1px solid $footerInputBorderColor;
-  color: $primaryTextColor;
-  background-color: $footerBcgColor;
+  height: 100%;
+  background-color: $backdropBcgColor;
 }
 
-@media screen and (min-width: 768px) {
-  .page-footer__form .page-footer__label input {
-    width: 450px;
-  }
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
-@media screen and (min-width: 1200px) {
-  .page-footer__form .page-footer__label input {
-    margin-bottom: 0;
-    margin-right: 12px;
-    width: 358px;
-  }
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 450px;
+  min-height: 609px;
+  background-color: $primaryWhiteColor;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
-
-@media screen and (min-width: 768px) {
-  .page-footer__label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .page-footer__label {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .page-footer__form {
-    margin-left: auto;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .page-footer p {
-    padding-top: 12px;
-  }
-}
-
 /* Modal_form */
 
 .modal-form {
@@ -58,7 +35,7 @@
 .modal-form__title {
   margin-top: 0;
   margin-bottom: 12px;
-  @include mainFont(700, 20px, 1.17);
+
   color: $titleTextColor;
   text-align: center;
 }
@@ -76,7 +53,7 @@
 
 .modal-form__mark {
   margin-bottom: 4px;
-  @include mainFont($size: 12px, $lh: 1.2, $ls: 0.01em);
+
   color: $primaryTextColor;
 }
 
@@ -112,7 +89,6 @@
 }
 
 .modal-form__comment textarea::placeholder {
-  @include mainFont($lh: 1.14, $ls: 0.01em);
   color: $modalPlaceholderColor;
 }
 
@@ -135,4 +111,45 @@
 
 textarea {
   resize: none;
+}
+
+/* Modal_button */
+
+.modal__button--close {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  border: 1px solid $buttonCloseBorder;
+  border-radius: 50%;
+  background-color: $primaryWhiteColor;
+  cursor: pointer;
+}
+
+.modal__button--close svg {
+  @include transitions(fill);
+}
+
+.modal__button--close:focus svg,
+.modal__button--close:hover svg {
+  fill: $accentColor;
+}
+
+/* Modal_button_send */
+
+.modal__button--send {
+  display: block;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px 10px 56px;
+
+  color: $primaryWhiteColor;
+  background-color: $accentColor;
+  border-radius: $borderRadiusMain;
+  border: $borderButton;
+  cursor: pointer;
 }

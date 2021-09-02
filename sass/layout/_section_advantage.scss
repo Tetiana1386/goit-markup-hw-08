@@ -1,19 +1,55 @@
 .section-advantage {
   padding-top: 60px;
   padding-bottom: 60px;
-}
 
-@media screen and (min-width: 768px) {
-  .section-advantage {
+  @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .section-advantage {
+  @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__item {
+      margin-right: 15px;
+      margin-left: 15px;
+      margin-bottom: 30px;
+      flex-basis: calc(100% / 2 - 30px);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__item {
+      flex-basis: calc(100% / 4 - 30px);
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__item:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__item:nth-last-child(-n + 4) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -28,42 +64,14 @@
   background-color: $sectionColor;
 }
 
-@media screen and (min-width: 768px) {
-  .section-advantage__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-}
+.section-advantage__subtitle {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
 
-@media screen and (min-width: 768px) {
-  .section-advantage__item {
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-bottom: 30px;
-    width: calc(100% / 2 - 30px);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .section-advantage__item {
-    width: calc(100% / 4 - 30px);
-  }
-}
-
-.section-advantage__item:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-@media screen and (min-width: 768px) {
-  .section-advantage__item:nth-last-child(-n + 2) {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .section-advantage__item:nth-last-child(-n + 4) {
-    margin-bottom: 0;
+  color: $titleTextColor;
+  text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+    text-align: start;
   }
 }

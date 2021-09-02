@@ -1,32 +1,42 @@
-.page-header__logo {
-  padding: 16px 0;
-  @include mainFont(700, 24px, $lh: 1.17);
-  font-family: $logoFontFamily;
-  color: $logoHederColor;
-  @include transitions(color);
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    color: $accentColor;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .page-header__logo {
-    margin-right: 93px;
-  }
-}
-
-span {
+.logo {
   color: $accentColor;
-}
-
-.page-footer__logo {
-  display: block;
-  margin-bottom: 20px;
-  @include mainFont(700, 24px, 1.17);
   font-family: $logoFontFamily;
-  color: $primaryWhiteColor;
+  font-weight: $titleFontWeight;
+  font-size: $mailFontSizeMob;
+  line-height: 1.17;
   text-decoration: none;
+
+  @media screen and (min-width: 1200px) {
+    font-size: $logoFontSize;
+    line-height: 1.19;
+  }
+
+  &__header {
+    color: $logoHederColor;
+  }
+
+  &__footer {
+    color: $primaryWhiteColor;
+  }
+
+  &--header {
+    padding: 16px 0;
+
+    @media screen and (min-width: 768px) {
+      padding: 26px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 24px 0;
+    }
+  }
+
+  &--footer {
+    display: block;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+  }
 }

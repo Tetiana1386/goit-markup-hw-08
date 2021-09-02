@@ -1,0 +1,84 @@
+.subscribe {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
+
+  &__content {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: $titleFontWeight;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primaryWhiteColor;
+  }
+}
+
+.tablet-footer {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+.subscribe-form {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    margin-bottom: 20px;
+    padding: 16px;
+    width: 100%;
+    max-width: 450px;
+    //color: $primaryWhiteColor;
+    font-size: $buttonTeamProjectFontSize;
+    font-weight: $primaryFontWeight;
+    border-radius: $borderRadiusMain;
+    border: 1px solid $footerInputBorderColor;
+    color: $primaryTextColor;
+    background-color: $footerBcgColor;
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-bottom: 0;
+      margin-right: 12px;
+    }
+
+    &__input::placeholder {
+      color: $footerInputBorderColor;
+      font-size: $buttonTeamProjectFontSize;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+    }
+  }
+
+  .button-subscribe {
+    @extend %button;
+    display: flex;
+    align-items: center;
+    padding-right: 28px;
+    padding-left: 28px;
+
+    @media screen and (max-width: 1199px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .button__icon {
+    fill: $primaryWhiteColor;
+    margin-left: 10px;
+  }
+}

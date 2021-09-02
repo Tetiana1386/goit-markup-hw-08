@@ -1,9 +1,7 @@
 .section-working {
   display: none;
-}
 
-@media screen and (min-width: 1200px) {
-  .section-working {
+  @media screen and (min-width: 1200px) {
     display: block;
   }
 }
@@ -16,7 +14,6 @@
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
-  @include mainFont(700, 36px, 1.17);
   color: $titleTextColor;
   text-align: center;
 }
@@ -44,7 +41,6 @@
   height: 70px;
   margin: 0;
   padding-top: 27px;
-  @include mainFont(700, $lh: 1.17);
 
   text-transform: uppercase;
   text-align: center;
